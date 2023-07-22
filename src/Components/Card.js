@@ -1,6 +1,6 @@
 import React from 'react';
 import {FcLike, FcLikePlaceholder} from "react-icons/fc";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const Card = (props) => {
     let course = props.course;
@@ -37,7 +37,7 @@ const Card = (props) => {
         <div className='relative '>
             <img src={course.image.url} alt=' not found' />
 
-            <div className='w-[35px] h-[35px] bg-white rounded-full absolute right-2 bottom-3 grid place-items-center '>
+            <div className='w-[35px] h-[35px] bg-white rounded-full absolute right-2 bottom-[-1] grid place-items-center '>
                 <button onClick={likeHandler} >
                     {
                         likedCourses.includes(course.id) ? (<FcLikePlaceholder fontSize="1.75rem" />) : (<FcLike fontSize="1.75rem"/>) 
